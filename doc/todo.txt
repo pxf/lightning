@@ -1,0 +1,37 @@
+Lv2
+
+	Protocols
+	Planning
+	Network layout/infrastructure
+	Report-repo etc...
+	Create sub-projects
+	Create pages-poop
+
+Lv3
+
+	Implement network-interface
+	Raytracing backend (intersection tests etc)
+	Raytracing Scene-storage (kd-tree ...)
+
+Lv4
+
+	Start on client/tracker
+	Start on raytracing plugin
+
+Lv5
+
+Lv6
+
+Lv7
+
+	Raytracer
+		Plugin raytracer
+		Plugin photonmapper
+	
+	P2P Network
+		Packer
+		Client
+		Tracker
+	
+	Misc
+		Some kind of GUI
