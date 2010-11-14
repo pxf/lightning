@@ -1,0 +1,13 @@
+Distributing a (sub-)batch.
+
+1) A batch is created by the batch owner and sends all the necessary information
+	to it's local client.
+2) The client asks the tracker for nodes along with information about how big the
+	job is, and how many nodes it needs.
+3) The tracker gives nodes to the client.
+4) The client fills his local work queue and distributes the rest of the tasks
+	to the connected nodes.
+5) Point 2-4 is done in each client until no more nodes are available.
+6) If there still are remaining tasks the client sets a flag telling the tracker
+	to give any free nodes to the waiting client so that the rest of the tasks
+	can be distributed and worked on.

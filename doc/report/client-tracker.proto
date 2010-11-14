@@ -1,0 +1,53 @@
+client							tracker
+----------------------------------
+registering:
+			->  TJA (0)  ->
+					IP, Port number
+			ping()
+			<-  TJA (0)  <-
+					Session number
+
+deregistering:
+			->  BYE (1)  ->
+					Session number
+			<-  BAI (1)  ->
+
+new batch:
+			->  HAS_BATCH (2) ->
+					Session number
+					Batch-hash
+					Batch type
+					Number of tasks
+			<-  OK (3)  <-
+
+request nodes:
+			->  REQUEST (4)  ->
+					Session number
+					Number of nodes
+			<-  VASSEGO (5)  <-
+					[Session number
+					, IP
+					, Port]
+
+done batch:
+			<-  DONE_BATCH (6)  <-
+			->  OK (3)  ->
+
+done task:
+			<-  DONE_TASK (7)  <-
+			->  OK (3)  ->
+
+hate node:
+			->  HATE ()  ->
+					Session number
+			<-  OK (3)  ->
+					
+
+ping:
+			<- - - PING - - -
+			- - - PONG - - ->
+
+Future things:
+x Passive connections. Only close connections when needed.
+
+

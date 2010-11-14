@@ -1,0 +1,18 @@
+Clients:
+
+ID Int
+IP Int
+Port Int
+Free Int
+
+
+Connections:
+
+SessionID1 Int
+SessionID2 Int
+
+
+Blacklist (one way):
+
+SessionID1 Int
+SessionID2 Int

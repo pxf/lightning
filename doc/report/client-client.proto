@@ -1,0 +1,37 @@
+client1							client2
+----------------------------------
+connection:
+			->  TJA (0)  ->
+					Session number
+			<-  TJA (0)  <-
+
+disconnection:
+			->  BYE ()  ->
+			<-  BAI ()  <-
+
+allocation:
+			->  ALLOCATE (1) ->
+					Number of tasks
+					Batch hash
+			<-  ALLOC_RESPONSE (2)  <-
+				 	Has data 
+					Is available
+			-> if !(Has data) : send_data() ->
+			-> send_tasks() ->
+
+send_data:
+			->  DATA (3)  ->
+					Batch hash
+					Size data
+					Data type
+					Data
+					Return address (IP, Port)
+
+send_tasks:
+			->  TASKS (4)  ->
+					Batch hash
+					[Task]
+									Tell tracker about availability
+
+
+Keep connection open.
